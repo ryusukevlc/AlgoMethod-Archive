@@ -1,0 +1,19 @@
+import java.util.*;
+public class Main {
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    String s = sc.next();
+    int n = sc.nextInt();
+    int m = sc.nextInt();
+
+    String[] array = s.split("");
+    String n_ = array[n-1];
+    String m_ = array[m-1];
+
+    array[n-1] = m_;
+    array[m-1] = n_;
+    
+    String ans = String.join("", array);
+    System.out.println(ans);
+  }
+}
