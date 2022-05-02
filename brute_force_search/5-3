@@ -1,0 +1,40 @@
+import java.util.*;
+public class Main {
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+
+    int x = sc.nextInt();
+    int y = sc.nextInt();
+    int z = sc.nextInt();
+
+    int[] arr_a = new int[x];
+    int[] arr_b = new int[y];
+    int[] arr_c = new int[z];
+
+    int count = 0;
+
+    for (int i = 0 ; i < x ; i++) {
+        arr_a[i] = sc.nextInt();
+    }
+
+    for (int j = 0 ; j < y ; j++) {
+        arr_b[j] = sc.nextInt();
+    }
+
+    for (int k = 0 ; k < z ; k++) {
+        arr_c[k] = sc.nextInt();
+    }
+
+    for (int i = 0 ; i < x ; i++) {
+        for (int j = 0 ; j < y ; j++) {
+            for (int k = 0 ; k < z ; k++) {
+                if (arr_a[i] + arr_b[j] == arr_c[k]) count++;
+            }
+        }
+    }
+
+    System.out.println(count);
+
+
+  }
+}

@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main {
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+
+    int n = sc.nextInt();
+    int m = sc.nextInt();
+
+    int[] arr_n = new int[n];
+    int[] arr_m = new int[m];
+
+    int count = 0;
+
+    for (int i = 0 ; i < n ; i++) {
+        arr_n[i] = sc.nextInt();
+    }
+
+    for (int j = 0 ; j < m ; j++) {
+        arr_m[j] = sc.nextInt();
+    }
+
+    for (int i = 0 ; i < n ; i++) {
+        for (int j = 0 ; j < m ; j++) {
+            if (arr_n[i] > arr_m[j]) {
+                count++;
+            }
+        }
+    }
+
+    System.out.println(count);
+
+  }
+}

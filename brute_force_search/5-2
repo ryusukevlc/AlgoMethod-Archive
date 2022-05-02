@@ -1,0 +1,34 @@
+import java.util.*;
+public class Main {
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+
+    int n = sc.nextInt();
+    int m = sc.nextInt();
+    int k = sc.nextInt();
+
+    int[] arr_a = new int[n];
+    int[] arr_b = new int[m];
+
+    int count = 0;
+
+    for (int i = 0 ; i < n ; i++) {
+        arr_a[i] = sc.nextInt();
+    }
+
+    for (int j = 0 ; j < m ; j++) {
+        arr_b[j] = sc.nextInt();
+    }
+
+    for (int i = 0 ; i < n ; i++) {
+        for (int j = 0 ; j < m ; j++) {
+            if (arr_a[i] + arr_b[j] == k) {
+                count++;
+            }
+        }
+    }
+
+    System.out.println(count);
+
+  }
+}
