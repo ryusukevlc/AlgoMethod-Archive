@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main {
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    int num_l = sc.nextInt();
+    int num_r = sc.nextInt();
+    int count = 0;
+
+    for (int i = num_l ; i <= num_r ; i++) {
+        String str_i = String.valueOf(i);
+
+        boolean isPalindrome = true;
+        for (int j = 0 ; j < str_i.length() ; j++) {
+            if (!(str_i.substring(j, j+1).equals(str_i.substring(str_i.length()-1-j, str_i.length()-j)))) {
+                isPalindrome = false;
+            }
+        }
+
+        if (isPalindrome) {
+            count++;
+        }
+    }
+
+    System.out.println(count);
+
+  }
+}
