@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main {
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    int num = sc.nextInt();
+    boolean isPrimeNumber = true;
+    if (num < 2) {
+      System.out.println("No");
+    } else {
+
+      for (int i = 1 ; i < num+1 ; i++) {
+        if (i == num || i == 1) {
+          continue;
+        }
+        if (num % i == 0) {
+          isPrimeNumber = false;
+        }
+      }
