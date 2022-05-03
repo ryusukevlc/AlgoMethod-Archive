@@ -1,0 +1,14 @@
+import java.util.*;
+public class Main {
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    String s = sc.next();
+    boolean isMatch = s.matches("^a{1,5}b{10}c*");
+
+    if (isMatch) {
+        System.out.println("Yes");
+    } else {
+        System.out.println("No");
+    }
+  }
+}
