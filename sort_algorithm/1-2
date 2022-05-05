@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main {
+  public static void main(String[] args){
+      Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      int[] array = new int[n];
+
+      for (int i = 0 ; i < n ; i++) {
+          array[i] = sc.nextInt();
+      } 
+
+      for (int i = 0 ; i < n - 1 ; i++) {
+          int temp = array[i];
+          int temp_index = i;
+          for (int j = i+1 ; j < n ; j++) {
+              if (temp > array[j]) {
+                  temp = array[j];
+                  temp_index = j;
+              }
+          }
+          array[temp_index] = array[i];
+          array[i] = temp;
+
+          String[] array_str = new String[n];
+          for (int k = 0 ; k < n ; k++) {
+              array_str[k] = String.valueOf(array[k]);
+          }
+          String result = String.join(" ", array_str);
+          System.out.println(result);
+      }
+
+  }
+}
