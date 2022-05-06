@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main {
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int x = sc.nextInt();
+    int y = sc.nextInt();
+
+    int ans = 0;
+    int y_cache = 0;
+    int cache = 0;
+
+    for (int i = 2 ; i < n ; i++) {
+        
+        if (i == 2) {
+            y_cache = y;
+            ans = (x + y) % 100;
+            continue;
+        }
+
+        cache = ans;
+        ans = (ans + y_cache) % 100;
+        y_cache = cache;
+    }
+        System.out.println(ans);
+
+
+
+  }
+}
